@@ -2,37 +2,56 @@
 
 ## Use
 
-> git clone https://github.com/qqxs/koa-mvc-starter.git
+```sh
+# 克隆仓库
+git clone https://github.com/qqxs/koa-mvc-starter.git
 
-> cd koa-mvc-starter && yarn install
+# 安装依赖
+yarn install
 
-> yarn run build
+# development run, nodemon run code
+yarn run dev
 
-> yarn run server
+# development run, pm2 run code
+yarn run dev:pm2
 
-如果开发使用
+# build ts -> js
+yanr run build
 
-> yarn run server:dev
+# production run, pm2 run dist
+yarn run serve
+
+# prettier write
+yarn run fmt
+```
 
 ## views
 
-渲染模版使用`pug`
+渲染模版使用`ejs`
 
 ## 功能
 
-[x] MVC
-[x] Restfull API
-[x] JWT
-[x] mongo
-[x] log4js
-[ ] Mysql
-[ ] Redis
-[ ] Cookie
-[ ] Session
-[x] prettier
-[x] husky
+- [x] MVC
+- [x] Restfull API
+- [x] JWT
+- [x] mongo
+- [x] log4js
+- [ ] Mysql
+- [ ] Redis
+- [ ] Cookie
+- [ ] Session
+- [x] prettier
+- [x] husky
 
-## 错误信息格式
+## 信息格式
+
+```json
+{
+  "code": 0,
+  "data": [],
+  "msg": ""
+}
+```
 
 ```json
 {
