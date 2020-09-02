@@ -1,6 +1,5 @@
 // require("@babel/register");
 // 初始化env中数据
-require('./utils/env.js')
 import app from './app'
 
 /**
