@@ -1,5 +1,5 @@
 import * as Koa from 'koa'
-import middleware from './middleware'
+import middleware from './middlewares'
 import routers from './routes'
 import initEnv from './utils/env'
 
