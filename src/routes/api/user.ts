@@ -1,7 +1,6 @@
-import * as Router from 'koa-router'
 import UserController from '../../controllers/user'
 import AlbumController from '../../controllers/album'
-import { tokenRequired } from '../../middleware'
+import { tokenRequired } from '../../middlewares'
 const userController = new UserController()
 const albumController = new AlbumController()
 
