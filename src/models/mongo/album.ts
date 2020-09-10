@@ -1,10 +1,8 @@
 import * as mongoose from 'mongoose'
-require('../db')
-
+require('../../db')
 const Schema = mongoose.Schema
 
 export interface IUser {
-  user_id?: number
   name?: string
   email?: string
   password?: string
@@ -14,19 +12,12 @@ export interface IUser {
 
 // 实例化数据模板
 
-const UserSchema = new Schema({
-  user_id: {
-    type: Number
-  },
+const AlbumSchema = new Schema({
   name: {
     type: String,
     required: true
   },
   email: {
-    type: String,
-    required: true
-  },
-  password: {
     type: String,
     required: true
   },
@@ -41,6 +32,6 @@ const UserSchema = new Schema({
   update_at: { type: Date, default: Date.now }
 })
 
-const UserModel = mongoose.model('user', UserSchema)
+const AlbumModel = mongoose.model('album', AlbumSchema)
 
-export default UserModel
+export default AlbumModel

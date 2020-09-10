@@ -1,4 +1,4 @@
-import AlbumModel from '../models/album'
+import AlbumModel from '../models/mongo/album'
 
 class AlbumService {
   /**

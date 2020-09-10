@@ -3,7 +3,7 @@
  * @Author: ShineShao <xiaoshaoqq@gmail.com>
  * @Date: 2020-05-15 13:52:25
  */
-import UserModel from '../models/user'
+import UserModel from '../models/mongo/user'
 import * as gravatar from 'gravatar'
 import * as Util from '../utils'
 
