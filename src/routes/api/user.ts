@@ -7,7 +7,7 @@ const albumController = new AlbumController()
 // @ts-ignore
 function userRestApi(router) {
   /**
-   * @route GET /api/user
+   * @route GET /api/v1/user
    * @desc 首页
    * @access 接口是公开到
    */
@@ -15,14 +15,14 @@ function userRestApi(router) {
 
   /**
    *
-   * @return POST /api/register
+   * @return POST /api/v1/register
    * @desc 注册接口
    */
   router.post('/register', userController.postRegister)
 
   /**
    *
-   * @route POST /api/login
+   * @route POST /api/v1/login
    * @desc 登陆接口
    */
   router.post('/login', userController.postLogin)
