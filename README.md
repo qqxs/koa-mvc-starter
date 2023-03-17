@@ -34,7 +34,7 @@ yarn run fmt
 - [x] MVC
 - [x] Restfull API
 - [x] JWT
-- [x] mongo
+- [ ] mysql
 - [x] log4js
 - [ ] Mysql
 - [ ] Redis

@@ -14,10 +14,7 @@ function jwtVerify(token: string) {
 
 export default async (ctx: Koa.Context, next: Koa.Next) => {
   let token = ''
-  if (
-    ctx.headers.authorization &&
-    ctx.headers.authorization.split(' ')[0] === 'Bearer'
-  ) {
+  if (ctx.headers.authorization && ctx.headers.authorization.split(' ')[0] === 'Bearer') {
     token = ctx.headers.authorization.split(' ')[1]
   }
 

@@ -1,4 +1,4 @@
-import * as Koa from 'koa'
+import type * as Koa from 'koa'
 import logger from '../utils/logger'
 
 // // 这个middleware用于将ctx.data中的内容最终回传给客户端
@@ -19,7 +19,7 @@ import logger from '../utils/logger'
 export const errorHandler = async (ctx: Koa.Context, next: Koa.Next) => {
   try {
     await next()
-  } catch (err) {
+  } catch (err: any) {
     if (err.code == null) {
       logger.error(err.stack)
     }

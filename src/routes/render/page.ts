@@ -1,4 +1,4 @@
-import * as Router from 'koa-router'
+import * as Router from '@koa/router'
 // import middleware from '../../middlewares'
 const router: any = new Router()
 

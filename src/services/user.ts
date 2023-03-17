@@ -1,13 +1,9 @@
-/*
- * @Description:
- * @Author: ShineShao <xiaoshaoqq@gmail.com>
- * @Date: 2020-05-15 13:52:25
- */
-import UserModel from '../models/mongo/user'
-import * as gravatar from 'gravatar'
-import * as Util from '../utils'
+interface IUserService {
+  getUsersByEmail: (email: string) => any
+  createUser: (name: string, email: string, password: string, avatar?: string) => Promise<boolean>
+}
 
-class UserService {
+class UserService implements IUserService {
   /**
    * @desc 查询email对应的用户
    *
@@ -16,7 +12,7 @@ class UserService {
    * @memberof UserService
    */
   public getUsersByEmail(email: string) {
-    return UserModel.findOne({ email })
+    return ''
   }
 
   /**
@@ -29,28 +25,8 @@ class UserService {
    * @returns {Promise[user]} user 保存结果
    * @memberof UserService
    */
-  public newAndSave(
-    name: string,
-    email: string,
-    password: string,
-    avatar?: string
-  ) {
-    const newUserModel: any = new UserModel({
-      name,
-      email,
-      password: Util.enBcryptSync(password),
-      avatar: avatar || this.makeGravatar(email)
-    })
-
-    return newUserModel.save()
-  }
-
-  private makeGravatar(email: string) {
-    return gravatar.url(email, {
-      s: '100',
-      r: 'pg',
-      d: 'mm'
-    })
+  public async createUser(name: string, email: string, password: string, avatar?: string) {
+    return await Promise.resolve(true)
   }
 }
 

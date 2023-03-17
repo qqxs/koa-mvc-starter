@@ -1,4 +1,6 @@
-import AlbumModel from '../models/mongo/album'
+interface IAlbumService {
+  getUsersById: (id: string | number) => boolean
+}
 
 class AlbumService {
   /**
@@ -7,13 +9,8 @@ class AlbumService {
    * @returns {Promise[album]}
    * @memberof AlbumService
    */
-  public getUsersById(id: string) {
-    const newAlbumModel: any = new AlbumModel({
-      name: 'ss',
-      email: 'xxxxx'
-    })
-
-    return newAlbumModel.save()
+  public getUsersById(id: string | number) {
+    return true
   }
 }
 
