@@ -2,7 +2,7 @@ interface IAlbumService {
   getUsersById: (id: string | number) => boolean
 }
 
-class AlbumService {
+class AlbumService implements IAlbumService {
   /**
    *
    * @param {string} id 相册id

@@ -1,6 +1,6 @@
-import * as views from 'koa-views'
-import * as path from 'path'
+import views from 'koa-views'
+import path from 'path'
 
-export default views(path.join(__dirname, `../../views`), {
+export default views(path.join(__dirname, '../../views'), {
   extension: 'ejs'
 })

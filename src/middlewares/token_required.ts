@@ -1,11 +1,12 @@
-import * as Koa from 'koa'
+import type * as Koa from 'koa'
 import * as jwt from 'jsonwebtoken'
 import { TOKENSECRET } from '../config/index'
 
-function jwtVerify(token: string) {
-  return new Promise((resolve, reject) => {
+async function jwtVerify(token: string) {
+  return await new Promise((resolve, reject) => {
     jwt.verify(token, TOKENSECRET, (err, decoded: any) => {
       if (err) {
+        // eslint-disable-next-line prefer-promise-reject-errors
         reject([err])
       } else resolve([null, decoded])
     })
@@ -19,12 +20,10 @@ export default async (ctx: Koa.Context, next: Koa.Next) => {
   }
 
   try {
-    // @ts-ignore
     await jwtVerify(token)
   } catch (e) {
-    // console.log(e);
     ctx.status = 401
-    if (/\/api\//.test(ctx.request.url)) {
+    if (ctx.request.url.includes('/api/')) {
       ctx.body = {
         code: 401,
         msg: '错误的 accessToken'

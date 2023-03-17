@@ -1,11 +1,11 @@
-import * as Koa from 'koa'
+import Koa from 'koa'
 import middleware from './middlewares'
 import routers from './routes'
 import initEnv from './utils/env'
 
-function setUp() {
+async function setUp() {
   // 初始化env中数据
-  initEnv()
+  await initEnv()
 
   const app: any = new Koa()
   // 配置中间件

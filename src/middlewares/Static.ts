@@ -1,4 +1,4 @@
-import * as Static from 'koa-static'
+import Static from 'koa-static'
 import * as path from 'path'
 
-export default Static(path.join(__dirname, `../../public`))
+export default Static(path.join(__dirname, '../../public'))

@@ -11,7 +11,7 @@ const saltRounds = 10
  * @return {string} 加密后的密码
  */
 const enBcryptSync = (password: string) => {
-  //随机生成salt
+  // 随机生成salt
   const salt = bcrypt.genSaltSync(saltRounds)
   const hash = bcrypt.hashSync(password, salt)
 

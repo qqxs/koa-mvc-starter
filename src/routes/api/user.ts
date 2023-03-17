@@ -1,18 +1,17 @@
 import UserController from '../../controllers/user'
 import AlbumController from '../../controllers/album'
 import { tokenRequired } from '../../middlewares'
+import type Router from '@koa/router'
 const userController = new UserController()
 const albumController = new AlbumController()
 
-// @ts-ignore
-function userRestApi(router) {
+function userRestApi(router: Router) {
   /**
    * @route GET /api/v1/user
    * @desc 首页
    * @access 接口是公开到
    */
   router.get('/user', tokenRequired, userController.getUser)
-
   /**
    *
    * @return POST /api/v1/register

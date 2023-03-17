@@ -1,4 +1,4 @@
-import * as Router from '@koa/router'
+import Router from '@koa/router'
 import userRestApiRouter from './api'
 import pageRenderRouter from './render/page'
 
