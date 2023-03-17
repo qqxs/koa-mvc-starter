@@ -1,5 +1,5 @@
 import type * as Koa from 'koa'
-import * as jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 import { TOKENSECRET } from '../config/index'
 
 async function jwtVerify(token: string) {

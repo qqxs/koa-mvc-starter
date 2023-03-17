@@ -1,5 +1,5 @@
 import type * as Koa from 'koa'
-import * as jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken'
 import * as Util from '../utils'
 import { EMAILREG, TOKENSECRET } from '../config'
 import UserService from '../services/user'
