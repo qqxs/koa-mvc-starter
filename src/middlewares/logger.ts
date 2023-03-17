@@ -11,7 +11,7 @@ export default async (ctx: Koa.Context, next: Koa.Next) => {
     ctx.ip ??
     ctx.ips ??
     // eslint-disable-next-line
-    (ctx.socket && (ctx.socket.remoteAddress ?? ctx.socket?.socket?.remoteAddress))
+    (ctx.socket && (ctx.socket.remoteAddress ?? 'no IP')) //ctx.socket?.socket?.remoteAddress
   const logText = `${ctx.method} ${ctx.status} ${ctx.url} 请求参数： ${JSON.stringify(
     ctx.request.body
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions

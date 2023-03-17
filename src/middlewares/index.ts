@@ -5,7 +5,7 @@ import tokenRequired from './token_required'
 import logger from './logger'
 import { errorHandler } from './response'
 
-import * as cors from '@koa/cors'
+import cors from '@koa/cors'
 
 export default (app: any) => {
   // 加载中间件
