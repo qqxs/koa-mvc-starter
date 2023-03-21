@@ -1,5 +1,5 @@
 import type * as Koa from 'koa'
-import logger from '../utils/logger'
+import logger from '@/utils/logger'
 
 export default async (ctx: Koa.Context, next: Koa.Next) => {
   const start = new Date().getTime()

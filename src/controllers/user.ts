@@ -1,10 +1,10 @@
 import type * as Koa from 'koa'
 import jwt from 'jsonwebtoken'
-import * as Util from '../utils'
-import { EMAILREG, TOKENSECRET } from '../config'
-import UserService from '../services/user'
+import * as Util from '@/utils'
+import { EMAILREG, TOKENSECRET } from '@/config'
+import UserService from '@/services/user'
 
-import { builderResponseSuccess, builderResponseError } from '../serialize/builder'
+import { builderResponseSuccess, builderResponseError } from '@/serialize/builder'
 
 const userService = new UserService()
 

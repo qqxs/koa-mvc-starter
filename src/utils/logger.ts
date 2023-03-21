@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import * as log4js from 'log4js'
-import { LogPath } from '../config'
+import { LogPath } from '@/config'
 
 const logsDir = path.parse(LogPath).dir
 if (!fs.existsSync(logsDir)) {

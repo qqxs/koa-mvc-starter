@@ -1,7 +1,7 @@
 import Koa from 'koa'
-import middleware from './middleware'
-import routers from './routes'
-import initEnv from './utils/env'
+import middleware from '@/middleware'
+import routers from '@/routes'
+import initEnv from '@/utils/env'
 
 async function server() {
   // 初始化env中数据

@@ -1,6 +1,6 @@
 import type * as Koa from 'koa'
 import jwt from 'jsonwebtoken'
-import { TOKENSECRET } from '../config/index'
+import { TOKENSECRET } from '@/config/index'
 
 async function jwtVerify(token: string) {
   return await new Promise((resolve, reject) => {

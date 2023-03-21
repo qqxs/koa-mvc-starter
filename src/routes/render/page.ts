@@ -1,5 +1,5 @@
 import Router from '@koa/router'
-// import middleware from '../../middlewares'
+// import middleware from '@/middleware'
 const router: any = new Router()
 
 /**

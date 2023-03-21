@@ -1,5 +1,5 @@
 import type * as Koa from 'koa'
-import logger from '../utils/logger'
+import logger from '@/utils/logger'
 
 // // 这个middleware用于将ctx.data中的内容最终回传给客户端
 // // 回传的格式遵循这样的格式：{ code: 0, msg: string data: any }

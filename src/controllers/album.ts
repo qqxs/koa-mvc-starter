@@ -1,6 +1,6 @@
 import type * as Koa from 'koa'
-import AlbumService from '../services/album'
-import { builderResponseSuccess } from '../serialize/builder'
+import AlbumService from '@/services/album'
+import { builderResponseSuccess } from '@/serialize/builder'
 
 const userService = new AlbumService()
 
