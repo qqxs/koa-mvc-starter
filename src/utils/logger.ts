@@ -14,15 +14,15 @@ log4js.configure({
     dateFile: {
       type: 'dateFile',
       filename: LogPath,
-      pattern: '-yyyy-MM-dd'
-    }
+      pattern: '-yyyy-MM-dd',
+    },
   },
   categories: {
     default: {
       appenders: ['console', 'dateFile'],
-      level: 'info'
-    }
-  }
+      level: 'info',
+    },
+  },
 })
 
 export default log4js.getLogger('[Default]')

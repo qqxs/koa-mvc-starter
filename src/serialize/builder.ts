@@ -16,7 +16,7 @@ function builderResponse(code: number, data: any, msg: string): ResponseResult {
   return {
     code,
     data,
-    msg
+    msg,
   }
 }
 

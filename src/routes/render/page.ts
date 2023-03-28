@@ -10,7 +10,7 @@ const router: any = new Router()
 router.get('/register', async (ctx: any, next: () => Promise<any>) => {
   await ctx.render('register', {
     title: '注册',
-    content: '欢迎'
+    content: '欢迎',
   })
 })
 
@@ -22,7 +22,7 @@ router.get('/register', async (ctx: any, next: () => Promise<any>) => {
 router.get('/login', async (ctx: any, next: () => Promise<any>) => {
   await ctx.render('login', {
     title: '登录',
-    content: '欢迎'
+    content: '欢迎',
   })
 })
 
@@ -34,7 +34,7 @@ router.get('/login', async (ctx: any, next: () => Promise<any>) => {
 router.get('/', async (ctx: any, next: () => Promise<any>) => {
   await ctx.render('index', {
     title: '首页',
-    content: 'Hello World!'
+    content: 'Hello World!',
   })
 })
 

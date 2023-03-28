@@ -77,7 +77,7 @@ class UserController {
         const payload = {
           id: user.id,
           name: user.name,
-          avatar: user.avatar
+          avatar: user.avatar,
         }
 
         const token = jwt.sign(payload, TOKENSECRET, { expiresIn: 3600 })
@@ -85,7 +85,7 @@ class UserController {
         // 登录成功
         ctx.status = 200
         ctx.body = ctx.body = builderResponseSuccess({
-          token
+          token,
         })
       } else {
         // ctx.status = ;

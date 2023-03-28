@@ -2,5 +2,5 @@ import views from 'koa-views'
 import path from 'path'
 
 export default views(path.join(__dirname, '../../views'), {
-  extension: 'ejs'
+  extension: 'ejs',
 })

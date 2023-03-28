@@ -26,7 +26,7 @@ export default async (ctx: Koa.Context, next: Koa.Next) => {
     if (ctx.request.url.includes('/api/')) {
       ctx.body = {
         code: 401,
-        msg: '错误的 accessToken'
+        msg: '错误的 accessToken',
       }
     } else {
       ctx.redirect('/login')

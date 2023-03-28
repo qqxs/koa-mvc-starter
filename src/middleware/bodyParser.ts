@@ -1,5 +1,5 @@
 import bodyParser from 'koa-bodyparser'
 
 export default bodyParser({
-  strict: true
+  strict: true,
 })

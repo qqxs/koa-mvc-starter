@@ -27,7 +27,7 @@ export const errorHandler = async (ctx: Koa.Context, next: Koa.Next) => {
     ctx.body = {
       code: err.code || -1,
       data: null,
-      msg: err.msg || '未知错误'
+      msg: err.msg || '未知错误',
     }
     // 保证返回状态是 200, 保证前端不会抛出异常
     ctx.status = 200
