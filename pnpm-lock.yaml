@@ -16,7 +16,7 @@ specifiers:
   dotenv: ^16.0.3
   ejs: ^3.1.9
   eslint: ^8.0.1
-  eslint-config-xx: ^1.0.4
+  eslint-config-xx: ^1.0.7
   husky: ^8.0.3
   jsonwebtoken: ^9.0.0
   koa: ^2.14.1
@@ -58,7 +58,7 @@ devDependencies:
   dotenv: 16.0.3
   ejs: 3.1.9
   eslint: 8.36.0
-  eslint-config-xx: 1.0.4_eslint@8.36.0
+  eslint-config-xx: 1.0.7_eslint@8.36.0
   husky: 8.0.3
   nodemon: 2.0.21
   only-allow: 1.1.1
@@ -1847,10 +1847,10 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.36.0
     dev: true
 
-  /eslint-config-xx/1.0.4_eslint@8.36.0:
+  /eslint-config-xx/1.0.7_eslint@8.36.0:
     resolution:
       {
-        integrity: sha512-YXuiUFs8Yw7jnQk541taWBBQaNKpscaZGxfAFQg1rW1vdUFdv5SYGJB4SBMO6bwhcOPlP/kan9Bu0/WrfWSR1A==,
+        integrity: sha512-9CT5GmCeHGVDEkyzF7+2MBN1Zpsq7yY3300dUITb1ojqKuDJoQbfytxc5BLG3/ipmRF4mQBbtbOhvRvW8cYZeQ==,
       }
     engines: { node: '>=14.0.0' }
     requiresBuild: true
