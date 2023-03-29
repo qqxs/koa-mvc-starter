@@ -15,8 +15,7 @@ specifiers:
   bcrypt: ^5.1.0
   dotenv: ^16.0.3
   ejs: ^3.1.9
-  eslint: ^8.0.1
-  eslint-config-xx: ^1.0.7
+  eslint-config-xx: ^1.0.8
   husky: ^8.0.3
   jsonwebtoken: ^9.0.0
   koa: ^2.14.1
@@ -27,7 +26,6 @@ specifiers:
   log4js: ^6.9.1
   nodemon: ^2.0.21
   only-allow: ^1.1.1
-  prettier: ^2.8.4
   pretty-quick: ^3.1.3
   ts-node: ^10.9.1
   tsconfig-paths: ^4.1.2
@@ -57,13 +55,11 @@ devDependencies:
   '@types/node': 18.15.3
   dotenv: 16.0.3
   ejs: 3.1.9
-  eslint: 8.36.0
-  eslint-config-xx: 1.0.7_eslint@8.36.0
+  eslint-config-xx: 1.0.8
   husky: 8.0.3
   nodemon: 2.0.21
   only-allow: 1.1.1
-  prettier: 2.8.4
-  pretty-quick: 3.1.3_prettier@2.8.4
+  pretty-quick: 3.1.3
   ts-node: 10.9.1_cbfmry4sbbh4vatmdrsmatfg5a
   tsconfig-paths: 4.1.2
   typescript: 4.9.5
@@ -1847,15 +1843,13 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.36.0
     dev: true
 
-  /eslint-config-xx/1.0.7_eslint@8.36.0:
+  /eslint-config-xx/1.0.8:
     resolution:
       {
-        integrity: sha512-9CT5GmCeHGVDEkyzF7+2MBN1Zpsq7yY3300dUITb1ojqKuDJoQbfytxc5BLG3/ipmRF4mQBbtbOhvRvW8cYZeQ==,
+        integrity: sha512-dzYX9322J2P8UBUkTl8cQCR1W/vpN6wMJzrwE9tOg/UWH2S5WTIgmc1sIn4TghBORkNrq7czX5fTUrrlnCDlcQ==,
       }
     engines: { node: '>=14.0.0' }
     requiresBuild: true
-    peerDependencies:
-      eslint: ^8.0.1
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.55.0_5t5646cukn2kik5kiydglap3vi
       '@typescript-eslint/parser': 5.57.0_vgl77cfdswitgr47lm5swmv43m
@@ -1867,6 +1861,7 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.36.0
       eslint-plugin-react: 7.32.2_eslint@8.36.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.36.0
+      prettier: 2.8.7
       typescript: 4.9.5
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
@@ -4107,16 +4102,16 @@ packages:
     engines: { node: '>= 0.8.0' }
     dev: true
 
-  /prettier/2.8.4:
+  /prettier/2.8.7:
     resolution:
       {
-        integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==,
+        integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==,
       }
     engines: { node: '>=10.13.0' }
     hasBin: true
     dev: true
 
-  /pretty-quick/3.1.3_prettier@2.8.4:
+  /pretty-quick/3.1.3:
     resolution:
       {
         integrity: sha512-kOCi2FJabvuh1as9enxYmrnBC6tVMoVOenMaBqRfsvBHB0cbpYHjdQEpSglpASDFEXVwplpcGR4CLEaisYAFcA==,
@@ -4132,7 +4127,6 @@ packages:
       ignore: 5.2.4
       mri: 1.2.0
       multimatch: 4.0.0
-      prettier: 2.8.4
     dev: true
 
   /pretty/2.0.0:

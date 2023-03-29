@@ -2,3 +2,7 @@
 node_modules/
 .idea/
 dist/
+
+**/*.min.css
+**/*.min.js
+public/js

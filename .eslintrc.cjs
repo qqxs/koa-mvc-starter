@@ -6,6 +6,9 @@ module.exports = {
     sourceType: 'module',
     project: ['tsconfig.json'],
   },
+  globals: {
+    $: 'readonly',
+  },
   plugins: [],
   rules: {},
-}
+};

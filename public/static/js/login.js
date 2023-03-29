@@ -1,36 +1,24 @@
-;(function () {
+(function () {
   $('form').submit(function (e) {
-    e.preventDefault()
-    var email = $('#email').val()
-    var password = $('#password').val()
+    e.preventDefault();
+    const email = $('#email').val();
+    const password = $('#password').val();
 
     if (!email) {
-      $('#email')
-        .siblings('.invalid-feedback')
-        .addClass('was-validated')
-        .text('邮箱不能为空')
-      return
+      $('#email').siblings('.invalid-feedback').addClass('was-validated').text('邮箱不能为空');
+      return;
     } else {
-      $('#email')
-        .siblings('.invalid-feedback')
-        .removeClass('was-validated')
-        .text('')
+      $('#email').siblings('.invalid-feedback').removeClass('was-validated').text('');
     }
 
     if (!password) {
-      $('#password')
-        .siblings('.invalid-feedback')
-        .addClass('was-validated')
-        .text('密码不能为空')
-      return
+      $('#password').siblings('.invalid-feedback').addClass('was-validated').text('密码不能为空');
+      return;
     } else {
-      $('#password')
-        .siblings('.invalid-feedback')
-        .removeClass('was-validated')
-        .text('')
+      $('#password').siblings('.invalid-feedback').removeClass('was-validated').text('');
     }
 
-    $('#submit').addClass('disabled')
+    $('#submit').addClass('disabled');
 
     $.ajax({
       type: 'POST',
@@ -39,19 +27,16 @@
       dataType: 'json',
       success: function (data) {
         if (data.code !== 0) {
-          $('#submit').removeClass('disabled')
-          $('#submit')
-            .siblings('.invalid-feedback')
-            .addClass('was-validated')
-            .text(data.msg)
+          $('#submit').removeClass('disabled');
+          $('#submit').siblings('.invalid-feedback').addClass('was-validated').text(data.msg);
         } else {
-          localStorage.setItem('token', data.token)
-          location.href = '/'
+          localStorage.setItem('token', data.token);
+          location.href = '/';
         }
       },
       fail: function () {
-        $('#submit').removeClass('disabled')
-      }
-    })
-  })
-})()
+        $('#submit').removeClass('disabled');
+      },
+    });
+  });
+})();
