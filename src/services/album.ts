@@ -1,5 +1,5 @@
 interface IAlbumService {
-  getUsersById: (id: string | number) => boolean
+  getUsersById: (id: string | number) => boolean;
 }
 
 class AlbumService implements IAlbumService {
@@ -10,8 +10,8 @@ class AlbumService implements IAlbumService {
    * @memberof AlbumService
    */
   public getUsersById(id: string | number) {
-    return true
+    return true;
   }
 }
 
-export default AlbumService
+export default AlbumService;

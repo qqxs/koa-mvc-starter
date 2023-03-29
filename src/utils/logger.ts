@@ -1,11 +1,11 @@
-import * as fs from 'fs'
-import * as path from 'path'
-import * as log4js from 'log4js'
-import { LogPath } from '@/config'
+import * as fs from 'fs';
+import * as path from 'path';
+import * as log4js from 'log4js';
+import { LogPath } from '@/config';
 
-const logsDir = path.parse(LogPath).dir
+const logsDir = path.parse(LogPath).dir;
 if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir)
+  fs.mkdirSync(logsDir);
 }
 
 log4js.configure({
@@ -23,6 +23,6 @@ log4js.configure({
       level: 'info',
     },
   },
-})
+});
 
-export default log4js.getLogger('[Default]')
+export default log4js.getLogger('[Default]');

@@ -1,3 +1,3 @@
-import { enBcryptSync, compareSync } from './bcrypt'
+import { enBcryptSync, compareSync } from './bcrypt';
 
-export { enBcryptSync, compareSync }
+export { enBcryptSync, compareSync };

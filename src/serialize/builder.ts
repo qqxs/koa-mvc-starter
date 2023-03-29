@@ -1,7 +1,7 @@
 interface ResponseResult {
-  code: number
-  data: any
-  msg: string | undefined
+  code: number;
+  data: any;
+  msg: string | undefined;
 }
 
 /**
@@ -17,7 +17,7 @@ function builderResponse(code: number, data: any, msg: string): ResponseResult {
     code,
     data,
     msg,
-  }
+  };
 }
 
 /**
@@ -27,7 +27,7 @@ function builderResponse(code: number, data: any, msg: string): ResponseResult {
  * @return {ResponseResult}
  */
 function builderResponseSuccess(data: any): ResponseResult {
-  return builderResponse(0, data, 'success')
+  return builderResponse(0, data, 'success');
 }
 
 /**
@@ -37,7 +37,7 @@ function builderResponseSuccess(data: any): ResponseResult {
  * @return {ResponseResult} ResponseResult
  */
 function builderResponseError(code: number, msg: any = 'fail'): ResponseResult {
-  return builderResponse(code, null, msg)
+  return builderResponse(code, null, msg);
 }
 
-export { builderResponse, builderResponseSuccess, builderResponseError }
+export { builderResponse, builderResponseSuccess, builderResponseError };

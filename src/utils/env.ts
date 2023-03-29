@@ -1,17 +1,17 @@
-import * as dotenv from 'dotenv'
+import * as dotenv from 'dotenv';
 
 const initEnv = async () => {
-  dotenv.config()
+  dotenv.config();
   return await new Promise((resolve, reject) => {
     const result = dotenv.config({
       path: process.env.NODE_ENV === 'production' ? '.env' : '.env.local',
-    })
+    });
     if (result.error) {
       // throw result.error
-      reject(result.error)
+      reject(result.error);
     }
-    resolve(result)
-  })
-}
+    resolve(result);
+  });
+};
 
-export default initEnv
+export default initEnv;

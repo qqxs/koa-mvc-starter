@@ -1,7 +1,7 @@
-import * as bcrypt from 'bcrypt'
+import * as bcrypt from 'bcrypt';
 
 // 生成salt的迭代次数
-const saltRounds = 10
+const saltRounds = 10;
 
 /**
  * 密码加密
@@ -12,11 +12,11 @@ const saltRounds = 10
  */
 const enBcryptSync = (password: string) => {
   // 随机生成salt
-  const salt = bcrypt.genSaltSync(saltRounds)
-  const hash = bcrypt.hashSync(password, salt)
+  const salt = bcrypt.genSaltSync(saltRounds);
+  const hash = bcrypt.hashSync(password, salt);
 
-  return hash
-}
+  return hash;
+};
 
 /**
  *  同步比较 是否相对
@@ -26,7 +26,7 @@ const enBcryptSync = (password: string) => {
  * @return {boolean} 返回比较结果
  */
 const compareSync = (password: string, hash: string) => {
-  return bcrypt.compareSync(password, hash)
-}
+  return bcrypt.compareSync(password, hash);
+};
 
-export { enBcryptSync, compareSync }
+export { enBcryptSync, compareSync };

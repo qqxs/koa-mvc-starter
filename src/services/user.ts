@@ -1,6 +1,6 @@
 interface IUserService {
-  getUsersByEmail: (email: string) => any
-  createUser: (name: string, email: string, password: string, avatar?: string) => Promise<boolean>
+  getUsersByEmail: (email: string) => any;
+  createUser: (name: string, email: string, password: string, avatar?: string) => Promise<boolean>;
 }
 
 class UserService implements IUserService {
@@ -12,7 +12,7 @@ class UserService implements IUserService {
    * @memberof UserService
    */
   public getUsersByEmail(email: string) {
-    return ''
+    return '';
   }
 
   /**
@@ -26,8 +26,8 @@ class UserService implements IUserService {
    * @memberof UserService
    */
   public async createUser(name: string, email: string, password: string, avatar?: string) {
-    return await Promise.resolve(true)
+    return await Promise.resolve(true);
   }
 }
 
-export default UserService
+export default UserService;

@@ -1,8 +1,8 @@
-import Router from '@koa/router'
-import userRestApi from './user'
+import Router from '@koa/router';
+import userRestApi from './user';
 
-const router: any = new Router()
+const router: any = new Router();
 
-userRestApi(router)
+userRestApi(router);
 
-export default router
+export default router;
