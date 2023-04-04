@@ -1,7 +1,7 @@
 interface ResponseResult {
   code: number;
   data: any;
-  msg: string | undefined;
+  msg?: string | undefined;
 }
 
 /**
@@ -33,10 +33,10 @@ function builderResponseSuccess(data: any): ResponseResult {
 /**
  * @description 序列化响应错误数据
  * @param {number} code 请求响应错误码 非 0
- * @param {any} msg 请求响应错误数据
+ * @param {string} msg 请求响应错误数据
  * @return {ResponseResult} ResponseResult
  */
-function builderResponseError(code: number, msg: any = 'fail'): ResponseResult {
+function builderResponseError(code: number, msg: string = 'fail'): ResponseResult {
   return builderResponse(code, null, msg);
 }
 
