@@ -1,6 +1,7 @@
 import views from 'koa-views';
 import path from 'path';
 
-export default views(path.join(__dirname, '../../views'), {
+export default views(path.join(__dirname, '../../templates'), {
   extension: 'html',
+  map: { html: 'ejs' }, // ejs 模板引擎
 });
