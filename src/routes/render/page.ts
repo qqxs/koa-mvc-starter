@@ -15,7 +15,7 @@ router.get('/register', async (ctx: any, next: () => Promise<any>) => {
 });
 
 /**
- * @route GET /register
+ * @route GET /login
  * @desc 注册
  * @access 接口是公开到
  */
