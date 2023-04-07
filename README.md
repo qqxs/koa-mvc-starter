@@ -16,7 +16,7 @@ yarn run dev
 yarn run dev:pm2
 
 # build ts -> js
-yanr run build
+yarn run build
 
 # production run, pm2 run dist
 yarn run serve
