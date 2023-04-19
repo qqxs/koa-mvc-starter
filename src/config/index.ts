@@ -10,4 +10,4 @@ export const DB_CONFIG: string = 'mongodb://shineshao:shineshao12345@ds253094.ml
 /** jwt secret */
 export const TOKEN_SECRET = 'shineshao';
 
-export const LogPath = path.resolve(__dirname, '../logs/logger.log');
+export const LogPath = path.resolve(__dirname, '../../logs/logger.log');
