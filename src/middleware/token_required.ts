@@ -1,10 +1,10 @@
 import type * as Koa from 'koa';
 import jwt from 'jsonwebtoken';
-import { TOKENSECRET } from '@/config/index';
+import { TOKEN_SECRET } from '@/config/index';
 
 async function jwtVerify(token: string) {
   return await new Promise((resolve, reject) => {
-    jwt.verify(token, TOKENSECRET, (err, decoded: any) => {
+    jwt.verify(token, TOKEN_SECRET, (err, decoded: any) => {
       if (err) {
         // eslint-disable-next-line prefer-promise-reject-errors
         reject([err]);
