@@ -5,7 +5,7 @@ import { builderResponseSuccess } from '@/serialize/builder';
 const userService = new AlbumService();
 
 class AlbumController {
-  async getAlbum(ctx: Koa.Context, next: Koa.Next) {
+  async getAlbum(ctx: Koa.Context) {
     const album = await userService.getUsersById('1000');
     console.log(album);
     ctx.body = builderResponseSuccess(album);

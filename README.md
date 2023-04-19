@@ -1,5 +1,7 @@
 # koa-mvc-starter
 
+![build](https://github.com/qqxs/koa-mvc-starter/workflows/build/c.svg)
+
 ## Use
 
 ```sh

@@ -4,8 +4,10 @@ import routers from '@/routes';
 import initEnv from '@/utils/env';
 
 async function server() {
-  // 初始化env中数据
-  await initEnv();
+  try {
+    // 初始化env中数据
+    await initEnv();
+  } catch (error) {}
 
   const app = new Koa();
   // 配置中间件

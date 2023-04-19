@@ -8,6 +8,7 @@ const router: any = new Router();
  * @access 接口是公开到
  */
 router.get('/register', async (ctx: any, next: () => Promise<any>) => {
+  console.log(next);
   await ctx.render('register', {
     title: '注册',
     content: '欢迎',
@@ -19,7 +20,7 @@ router.get('/register', async (ctx: any, next: () => Promise<any>) => {
  * @desc 注册
  * @access 接口是公开到
  */
-router.get('/login', async (ctx: any, next: () => Promise<any>) => {
+router.get('/login', async (ctx: any) => {
   await ctx.render('login', {
     title: '登录',
     content: '欢迎',
@@ -31,7 +32,7 @@ router.get('/login', async (ctx: any, next: () => Promise<any>) => {
  * @desc 首页
  * @access 接口是公开到
  */
-router.get('/', async (ctx: any, next: () => Promise<any>) => {
+router.get('/', async (ctx: any) => {
   await ctx.render('index', {
     title: '首页',
     content: 'Hello World!',
