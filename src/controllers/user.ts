@@ -1,7 +1,7 @@
 import type * as Koa from 'koa';
 import jwt from 'jsonwebtoken';
 import * as Util from '@/utils';
-import { EMAILREG, TOKENSECRET } from '@/config';
+import { EMAIL_REG, TOKEN_SECRET } from '@/config';
 import UserService from '@/services/user';
 
 import { builderResponseSuccess, builderResponseError } from '@/serialize/builder';
@@ -9,11 +9,12 @@ import { builderResponseSuccess, builderResponseError } from '@/serialize/builde
 const userService = new UserService();
 
 class UserController {
-  public async getUser(ctx: Koa.Context, next: Koa.Next) {
+  // public async getUser(ctx: Koa.Context, next: Koa.Next) {
+  public async getUser(ctx: Koa.Context) {
     ctx.body = builderResponseSuccess('hello world');
   }
 
-  public async postRegister(ctx: Koa.Context, next: Koa.Next) {
+  public async postRegister(ctx: Koa.Context) {
     const { name, password, email } = ctx.request.body as any;
 
     console.log(ctx.request.body);
@@ -23,7 +24,7 @@ class UserController {
       return;
     }
 
-    if (!EMAILREG.test(email)) {
+    if (!EMAIL_REG.test(email)) {
       ctx.body = builderResponseError(1, '邮箱格式不对');
       return;
     }
@@ -38,6 +39,7 @@ class UserController {
       await userService
         .createUser(name, email, password)
         .then((user: any) => {
+          console.log(user);
           // 注册成功
           ctx.body = builderResponseSuccess(null);
         })
@@ -48,7 +50,7 @@ class UserController {
     }
   }
 
-  public async postLogin(ctx: Koa.Context, next: Koa.Next) {
+  public async postLogin(ctx: Koa.Context) {
     const { email, password } = ctx.request.body as any;
 
     if (!email || !password) {
@@ -56,7 +58,7 @@ class UserController {
       return;
     }
 
-    if (!EMAILREG.test(email)) {
+    if (!EMAIL_REG.test(email)) {
       ctx.body = builderResponseError(1, '邮箱格式不对');
       return;
     }
@@ -80,7 +82,7 @@ class UserController {
           avatar: user.avatar,
         };
 
-        const token = jwt.sign(payload, TOKENSECRET, { expiresIn: 3600 });
+        const token = jwt.sign(payload, TOKEN_SECRET, { expiresIn: 3600 });
 
         // 登录成功
         ctx.status = 200;

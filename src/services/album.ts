@@ -10,6 +10,7 @@ class AlbumService implements IAlbumService {
    * @memberof AlbumService
    */
   public getUsersById(id: string | number) {
+    console.log(id);
     return true;
   }
 }

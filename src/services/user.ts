@@ -12,6 +12,7 @@ class UserService implements IUserService {
    * @memberof UserService
    */
   public getUsersByEmail(email: string) {
+    console.log(email);
     return '';
   }
 
@@ -26,6 +27,7 @@ class UserService implements IUserService {
    * @memberof UserService
    */
   public async createUser(name: string, email: string, password: string, avatar?: string) {
+    console.log(name, email, password, avatar);
     return await Promise.resolve(true);
   }
 }
