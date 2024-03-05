@@ -1,4 +1,4 @@
-import views from 'koa-views';
+import views from '@ladjs/koa-views';
 import path from 'path';
 
 export default views(path.join(__dirname, '../../templates'), {
