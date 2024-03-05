@@ -9,22 +9,22 @@
 git clone https://github.com/qqxs/koa-mvc-starter.git
 
 # 安装依赖
-yarn install
+pnpm install
 
 # development run, nodemon run code
-yarn run dev
+pnpm run dev
 
 # development run, pm2 run code
-yarn run dev:pm2
+pnpm run dev:pm2
 
 # build ts -> js
-yarn run build
+pnpm run build
 
 # production run, pm2 run dist
-yarn run serve
+pnpm run serve
 
 # prettier write
-yarn run fmt
+pnpm run fmt
 ```
 
 ## views
