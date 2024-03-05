@@ -3,6 +3,18 @@ interface IUserService {
   createUser: (name: string, email: string, password: string, avatar?: string) => Promise<boolean>;
 }
 
+export interface IUserRegisterBody {
+  name: string;
+  email: string;
+  password: string;
+  avatar?: string;
+}
+
+export interface IUserLoginBody {
+  email: string;
+  password: string;
+}
+
 class UserService implements IUserService {
   /**
    * @desc 查询email对应的用户
@@ -13,7 +25,13 @@ class UserService implements IUserService {
    */
   public getUsersByEmail(email: string) {
     console.log(email);
-    return '';
+    return {
+      id: 'id',
+      name: 'name',
+      email,
+      avatar: 'avatar',
+      password: 'password',
+    };
   }
 
   /**

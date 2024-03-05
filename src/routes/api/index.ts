@@ -1,7 +1,7 @@
 import Router from '@koa/router';
 import userRestApi from './user';
 
-const router: any = new Router();
+const router = new Router();
 
 userRestApi(router);
 

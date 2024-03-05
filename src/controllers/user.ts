@@ -2,7 +2,7 @@ import type * as Koa from 'koa';
 import jwt from 'jsonwebtoken';
 import * as Util from '@/utils';
 import { EMAIL_REG, TOKEN_SECRET } from '@/config';
-import UserService from '@/services/user';
+import UserService, { type IUserRegisterBody, type IUserLoginBody } from '@/services/user';
 
 import { builderResponseSuccess, builderResponseError } from '@/serialize/builder';
 
@@ -15,7 +15,7 @@ class UserController {
   }
 
   public async postRegister(ctx: Koa.Context) {
-    const { name, password, email } = ctx.request.body as any;
+    const { name, password, email } = ctx.request.body as IUserRegisterBody;
 
     console.log(ctx.request.body);
 
@@ -51,7 +51,7 @@ class UserController {
   }
 
   public async postLogin(ctx: Koa.Context) {
-    const { email, password } = ctx.request.body as any;
+    const { email, password } = ctx.request.body as IUserLoginBody;
 
     if (!email || !password) {
       ctx.body = builderResponseError(1, `${!email ? '邮箱' : '密码'}是必填项`);
@@ -64,7 +64,7 @@ class UserController {
     }
 
     // 查询邮箱
-    const findResult: any = await userService.getUsersByEmail(email);
+    const findResult = await userService.getUsersByEmail(email);
 
     if (!findResult) {
       // 邮箱不存在 请先去注册
@@ -72,6 +72,7 @@ class UserController {
       ctx.body = builderResponseError(1, '用户不存在！');
     } else {
       // 验证密码
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       const result = Util.compareSync(password, findResult.password);
 
       if (result) {

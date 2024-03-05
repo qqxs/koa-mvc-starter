@@ -1,6 +1,6 @@
 import Router from '@koa/router';
 // import middleware from '@/middleware'
-const router: any = new Router();
+const router = new Router();
 
 /**
  * @route GET /register

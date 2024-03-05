@@ -11,12 +11,14 @@ function userRestApi(router: Router) {
    * @desc 首页
    * @access 接口是公开到
    */
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   router.get('/user', tokenRequired, userController.getUser);
   /**
    *
    * @return POST /api/v1/register
    * @desc 注册接口
    */
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   router.post('/register', userController.postRegister);
 
   /**
@@ -24,8 +26,10 @@ function userRestApi(router: Router) {
    * @route POST /api/v1/login
    * @desc 登陆接口
    */
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   router.post('/login', userController.postLogin);
 
+  // eslint-disable-next-line @typescript-eslint/unbound-method
   router.get('/album', albumController.getAlbum);
 }
 

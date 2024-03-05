@@ -8,6 +8,7 @@ const router: Router = new Router();
 router.use('/api/v1', userRestApiRouter.routes());
 
 // page
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 router.use('', pageRenderRouter.routes());
 
 export default router;
